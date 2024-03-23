@@ -13,7 +13,7 @@ export const sendMessage = async (req,res) =>{
 
         if(!conversation){
             conversation = await Conversation.create({
-                paricipants: [senderId, receiverId ],
+                participants: [senderId, receiverId ],
             })
         }
 
@@ -48,9 +48,9 @@ export const getMessages = async (req, res) => {
 		const { id: userToChatId } = req.params;
 		const senderId = req.user._id;
 
-		const conversation = await Conversation.findOne({
+		const conversation = await Conversation.find({
 			participants: { $all: [senderId, userToChatId] },
-		})//.populate("messages"); // NOT REFERENCE BUT ACTUAL MESSAGES
+		}).populate("messages"); // NOT REFERENCE BUT ACTUAL MESSAGES
 
 		if (!conversation) return res.status(200).json([]);
 

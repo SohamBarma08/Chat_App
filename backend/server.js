@@ -11,9 +11,9 @@ const PORT =5000 //process.env.PORT || 5000;
 
 dotenv.config();    
 
-// app.get("/", (req,res) => {
-//     res.send("Hello World!!!");
-// });
+//  app.get("/", (req,res) => {
+//      res.send("Hello World!!!");
+//  });
 
 app.use(express.json());
 app.use(cookieParser());
