@@ -1,8 +1,12 @@
-import  { createContext,useState,useEffect } from "react";
-import {useAuthContext} from './AuthContext.jsx';
+import  { createContext, useState, useEffect, useContext } from "react";
+import { useAuthContext} from './AuthContext.jsx';
 import io from "socket.io-client";
 
 export const SocketContext = createContext();
+
+export const useSocketContext = () => {
+    return useContext(SocketContext);
+};
 
 export const SocketContextProvider = ({children}) => {
     const [socket,setSocket] = useState(null);
