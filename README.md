@@ -18,6 +18,6 @@ The proposed solution aims to develop a real-time chat application that addresse
 
 
 ## :link: Website Link:
-:paperclip: [https://well-nexus.netlify.app/](https://chat-app-89b8.onrender.com)
+:paperclip: [https://chat-app-89b8.onrender.com](https://chat-app-89b8.onrender.com)
 
 
